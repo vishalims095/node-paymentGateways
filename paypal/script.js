@@ -1,7 +1,11 @@
 const express = require('express')
 var bodyParser = require('body-parser')
+var path = require("path");
+
 const app = express()
-app.use(__dirname , "/index.html")
+app.use(express.static(path.join(__dirname, "views")));
+
+// app.use(__dirname , "/index.html")
 // app.get('/',(req, res) =>{
 //     res.sendFile(__dirname + "/index.html");
 // })
